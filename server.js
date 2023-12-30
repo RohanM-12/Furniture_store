@@ -1,10 +1,7 @@
-const express = require("express");
-// const { getApi } = require("./controller/getApi");
+const http = require("http");
+const app = require("./app");
+const PORT = 3030;
 
-const app = express();
+const server = http.createServer(app);
 
-// app.get("/api", getApi);
-
-app.listen(process.env.PORT, () => {
-  console.log("Server Up and Running ");
-});
+server.listen(PORT);
